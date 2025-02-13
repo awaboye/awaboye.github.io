@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; 
+            color: #6c757d;
+        }
+
+        :root {
+            --violet: #8a2be2;
+            --rose: #ff69b4;
+            --blanc: #ffffff;
+        }
+
+        .navbar {
+            background-color: var(--violet) !important;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: var(--blanc) !important;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: var(--rose) !important;
+        }
+
+        #accueil {
+            background-color: var(--blanc);
+            padding: 100px 0;
+        }
+
+        #accueil img {
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--rose);
+        }
+
+        #accueil h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--violet);
+        }
+
+        #accueil p {
+            font-size: 1.5rem;
+            color: var(--violet);
+        }
+
+        #accueil .btn {
+            background-color: var(--rose);
+            border: none;
+            margin-top: 20px;
+            color: var(--blanc);
+        }
+
+        #accueil .btn:hover {
+            background-color: var(--violet);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        #accueil h1, #accueil p, #accueil .btn {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Section À propos */
+        #apropos {
+            background-color: var(--violet);
+            padding: 60px 0;
+        }
+
+        #apropos h2 {
+            color: var(--blanc);
+        }
+
+        #apropos p {
+            color: var(--blanc);
+        }
+
+        /* Section Compétences */
+        #competences {
+            background-color: var(--blanc);
+            padding: 60px 0;
+        }
+
+        #competences h2 {
+            color: var(--violet);
+        }
+
+        .skill {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .skill i {
+            font-size: 3rem;
+            color: var(--rose);
+        }
+
+        .skill h3 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+            color: var(--violet);
+        }
+
+        .progress {
+            height: 20px;
+            margin-top: 10px;
+            background-color: #e9ecef;
+        }
+
+        .progress-bar {
+            background-color: var(--rose);
+        }
+
+        /* Section Projets */
+        #projets {
+            background-color: var(--blanc);
+            padding: 60px 0;
+        }
+
+        #projets h2 {
+            color: var(--violet);
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            color: var(--violet);
+        }
+
+        .card-text {
+            color: var(--rose);
+        }
+
+        .card img {
+            border-radius: 10px;
+        }
+
+        .card .btn {
+            background-color: var(--rose);
+            border: none;
+            color: var(--blanc);
+        }
+
+        .card .btn:hover {
+            background-color: var(--violet);
+        }
+
+        /* Section Contact */
+        #contact {
+            background-color: var(--rose);
+            padding: 60px 0;
+        }
+
+        #contact h2 {
+            color: var(--blanc);
+        }
+
+        #contact p {
+            color: var(--blanc);
+        }
+
+        #contact .btn {
+            background-color: var(--violet);
+            border: none;
+            color: var(--blanc);
+        }
+
+        #contact .btn:hover {
+            background-color: var(--blanc);
+            color: var(--violet);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--violet);
+            color: var(--blanc);
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mon Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#apropos">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#competences">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projets">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                    <img src="ma photo.jpg" alt="Votre Nom" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h1>Je suis Awa BOYE</h1>
+                    <p>Bienvenue sur mon porfolio</p>
+                    <a href="CV Awa BOYE.pdf" class="btn" download>Télécharger mon CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos" class="py-5">
+        <div class="container">
+            <h2 class="text-center">À propos de moi</h2>
+            <p class="text-center">
+                Je suis un développeur web passionné par la création de sites web modernes et réactifs.Dans mes études en informatique de gestion, j'apprends à allier les concepts techniques et les principes de gestion. Je me concentre sur le développement de logiciels, la gestion de bases de données et l'analyse des systèmes d'information. J'apprécie particulièrement les projets pratiques qui me permettent de mettre en œuvre mes connaissances et de travailler en équipe. Mon objectif est de devenir une professionnelle capable de contribuer à l'optimisation des processus d'affaires grâce à la technologie.
+
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Compétences</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="skill">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML/CSS</h3>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill">
+                        <i class="fab fa-php"></i>
+                        <h3>PHP</h3>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill">
+                        <i class="fab fa-wordpress"></i>
+                        <h3>WordPress</h3>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Mes Projets</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="cli.jpeg" class="card-img-top" alt="Projet 1">
+                        <div class="card-body">
+                            <h5 class="card-title">projet de creation d'une clinique medical privée a saly</h5>
+                            <p class="card-text">Mon projet de création d'une clinique médicale privée à Saly vise à offrir des soins de santé de qualité aux habitants et aux touristes de la région. La clinique sera équipée de technologies modernes et proposera une large gamme de services médicaux, allant des consultations générales aux spécialités comme la pédiatrie et la gynécologie.
+
+                                Nous prévoyons également d'intégrer des services de prévention et de bien-être, tels que des bilans de santé réguliers et des programmes de sensibilisation à la santé. L'objectif est de créer un environnement accueillant où les patients se sentent en sécurité et bien pris en charge. En collaborant avec des professionnels de santé qualifiés, nous souhaitons établir une réputation d'excellence et de confiance dans la communauté.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="chaussure.jpeg" class="card-img-top" alt="Projet 2">
+                        <div class="card-body">
+                            <h5 class="card-title">projet de creation d'un site de vente de chaussures en ligne</h5>
+                            <p class="card-text">Mon projet pour le site de vente de chaussures pour filles en ligne, nommé "Shoes Store", a pour objectif de devenir la destination incontournable pour les passionnées de mode. Le site proposera une large gamme de chaussures, allant des modèles tendance aux classiques indémodables, pour répondre à tous les styles et toutes les occasions.
+
+Nous mettrons l'accent sur une expérience utilisateur fluide avec une navigation facile, des filtres de recherche efficaces et des descriptions détaillées de chaque produit. De plus, nous prévoyons d'intégrer des avis clients pour aider les acheteuses à faire le meilleur choix. Notre engagement envers la qualité et le service client sera au cœur de notre mission, afin de fidéliser notre clientèle et de bâtir une communauté autour de "Shoes Store".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <p class="text-center">Email: boye4885@gmail.com</p>
+                    <p class="text-center">Téléphone: +221 78 100 86 36</p>
+                    <div class="text-center">
+                        <a href="mailto:votre.email@example.com" class="btn">Envoyer un email</a>
+                        <a href="tel:+33123456789" class="btn">Appeler</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>&copy; copyright@2025 Awa BOYE programmers coding for better 78 100 86 36 boye4885@gmail.com</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
